@@ -1,0 +1,591 @@
+<div id="demo">
+    <h1>You may also like</h1>
+  </div>
+  
+<!-- CAROUSEL static-->
+
+  <div id="testcarousel">
+    <div class="cont" id="testcarousel0"><button onclick="myFunction1()"><</button></div>  
+    <div id="testcarousel1"><img onclick="myFunction20()" id="imag1" class="go" src="" alt=""></div>
+    <div id="testcarousel2"><img onclick="myFunction21()" id="imag2" class="go" src="" alt=""></div>
+    <div id="testcarousel3"><img onclick="myFunction22()" id="imag3" class="go" src="" alt=""></div>
+    <div id="testcarousel4"><img onclick="myFunction23()" id="imag4" class="go" src="" alt=""></div>
+      <div id="testcarousel5"><button onclick="myFunction()">></button></div>
+  </div>
+    
+<!-- PopUp static-->
+
+   <div id="popup" style="visibility:hidden">
+      <div id="popup-cancel1">
+        <div id="popup-cancel">
+          <button onclick="myFunction3()">X</button>
+        </div>
+     </div>
+        <h3 id="popuptitle">Fashion Men Stainless Steel Case Watch</h3>
+    <div id="popup1">
+        <div id="popup-img">
+        <img id="imag12" src="" style="width:300px; height:300px" alt=""></div>
+       <div id="popup-text">
+         <p id="popuptext">Brand Name: xiniu</br>
+Gender: Men</br>
+Style: Fashion & Casual</br>
+Movement: Quartz</br>
+Case Material: Alloy</br>
+Band Length: 22cm</br>
+Clasp Type: Buckle</br>
+Water Resistance Depth: No waterproof</br>
+Feature: None</br>
+Dial Diameter: 35.5mm</br>
+Model Number: fashion watch</br>
+Boxes & Cases Material: No package</br>
+Dial Window Material Type: Glass</br>
+Case Shape: Round</br>
+Band Material Type: PU</br>
+Band Width: 19mm</br>
+Case Thickness: 7mm</br>
+Item Type: Quartz Wristwatches</p>
+</div>
+</div>
+        <div id="popup-btn">
+         <a id="hreff" style="visibility:hidden" href = "https://ivankvachtest.myshopify.com/products/2017-luxury-brand-mens-watches-leather-mens-quartz-clock-man-casual-wrist-watch-relogio-masculino-horloges-mannen-515"><button></button></a>
+              
+        </div>
+<iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+<form method="post" action="/cart/add" target="dummyframe">
+        <input type="hidden" id="quantity1" name="id" value="" />
+<!--         <input min="1" type="number" id="quantity" name="quantity" value="1"/> -->
+        <input type="submit" value="Add to cart" class="btn"/>
+</form>
+  </div>
+    
+<!-- PopUp function-->
+<script>
+  function myFunction20() {
+    let x, y, z, t, cart;
+    document.getElementById("popup").style.visibility = "visible";
+    x = document.getElementById("imag1").alt;
+   // console.log(x);
+    jQuery.getJSON('/products/'+x+'.js', function(product) {
+  //alert('The title of this product is ' + product.title);
+     // console.log(y);
+    y = product.images[0];
+    z = product.title;
+    t = product.title;
+    cart = product.variants[0].id;
+      //console.log(t);
+    document.getElementById("imag12").src = y;
+    document.getElementById("popuptitle").textContent = z;
+    document.getElementById("popuptext").textContent = t;
+    document.getElementById("quantity1").value = cart;
+      //console.log(product);
+      //console.log(document.getElementById("quantity1").value);
+      //console.log(product.variants[0].id);
+      
+} );
+  }
+</script>
+<script>
+  function myFunction21() {
+    let x, y, z, t, cart;
+    document.getElementById("popup").style.visibility = "visible";
+    x = document.getElementById("imag2").alt;
+   // console.log(x);
+    jQuery.getJSON('/products/'+x+'.js', function(product) {
+  //alert('The title of this product is ' + product.title);
+     // console.log(y);
+    y = product.images[0];
+    z = product.title;
+    t = product.title;
+      cart = product.variants[0].id;
+      //console.log(t);
+    document.getElementById("imag12").src = y;
+    document.getElementById("popuptitle").textContent = z;
+    document.getElementById("popuptext").textContent = t;
+      document.getElementById("quantity1").value = cart;
+      //console.log(product);
+      
+} );
+  }
+</script>
+<script>
+  function myFunction22() {
+    let x, y, z, t, cart;
+    document.getElementById("popup").style.visibility = "visible";
+    x = document.getElementById("imag3").alt;
+    //console.log(x);
+    jQuery.getJSON('/products/'+x+'.js', function(product) {
+  //alert('The title of this product is ' + product.title);
+     // console.log(y);
+    y = product.images[0];
+    z = product.title;
+    t = product.title;
+      cart = product.variants[0].id;
+      //console.log(t);
+    document.getElementById("imag12").src = y;
+    document.getElementById("popuptitle").textContent = z;
+    document.getElementById("popuptext").textContent = t;
+      document.getElementById("quantity1").value = cart;
+      //console.log(product);
+      
+} );
+  }
+</script>
+<script>
+  function myFunction23() {
+    let x, y, z, t, cart;
+    document.getElementById("popup").style.visibility = "visible";
+    x = document.getElementById("imag4").alt;
+    //console.log(x);
+    jQuery.getJSON('/products/'+x+'.js', function(product) {
+  //alert('The title of this product is ' + product.title);
+     // console.log(y);
+    y = product.images[0];
+    z = product.title;
+    t = product.title;
+      cart = product.variants[0].id;
+      //console.log(t);
+    document.getElementById("imag12").src = y;
+    document.getElementById("popuptitle").textContent = z;
+    document.getElementById("popuptext").textContent = t;
+      document.getElementById("quantity1").value = cart;
+     // console.log(product);
+      
+} );
+  }
+</script>
+
+<!-- <script>
+  function myFunction23() {
+    document.getElementById("popup").style.visibility = "visible";
+    let a, b, c, d, x, y, z, t, m;
+    x = document.getElementById("imag1").src;
+    y = document.getElementById("popuptext").textContent;
+    z = document.getElementById("popuptitle").textContent;
+    t = document.getElementById("hreff").href
+    a = "";
+    b = "";
+    c = "";
+    d = "";
+    if (x == "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-354904609.jpg?v=1641376468") {     
+    a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-354904609.jpg?v=1641376468&width=200"; 
+    b ="2017 Luxury Brand Mens Watches Leather Men's Quartz Clock Man Casual Wrist Watch Relogio Masculino horloges mannen #515 — SALE PRICE ₴ 4.97 ";
+    c = "Men Stainless Steel Case Watch";
+    t = "https://ivankvachtest.myshopify.com/products/2017-luxury-brand-mens-watches-leather-mens-quartz-clock-man-casual-wrist-watch-relogio-masculino-horloges-mannen-515";
+      
+    }else if (x == "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1434056154.jpg?v=1641376520"){ 
+    a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1434056154.jpg?v=1641376520&width=200";
+    b ="CURREN Casual Sport Watches for Men Blue Top Brand Luxury Military Leather Wrist Watch Man Clock Fashion Chronograph Wristwatch — REGULAR PRICE ₴ 40.95";
+    c = "CURREN Casual Sport Watches for Men";
+    t = "https://ivankvachtest.myshopify.com/products/curren-casual-sport-watches-for-men-blue-top-brand-luxury-military-leather-wrist-watch-man-clock-fashion-chronograph-wristwatch";
+    }else if (x == "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1250884701.jpg?v=1641376553"){ 
+    a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1250884701.jpg?v=1641376553&width=200";
+    b ="Fashion Men Stainless Steel Case Watch Luxury Calendar Quartz Wrist Watches Business Casual Watch for Man Clock Relogio Masculin — REGULAR PRICE ₴ 28";
+    c = "Fashion Men Stainless Steel Luxury";
+    t = "https://ivankvachtest.myshopify.com/products/fashion-men-stainless-steel-case-watch-luxury-calendar-quartz-wrist-watches-business-casual-watch-for-man-clock-relogio-masculin";
+    }else if (x == "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-877140709.jpg?v=1641376632"){ 
+    a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-877140709.jpg?v=1641376632&width=200";
+    b ="SINOBI Digital Sports Watch Chronograph Men's Wrist Watches LED Clock Man Military Waterproof NAVI Watch Relogio Masculino 2019 — REGULAR PRICE ₴ 32.98";
+    c = "SINOBI Digital Sports Watch Men's";
+    t = "https://ivankvachtest.myshopify.com/products/sinobi-digital-sports-watch-chronograph-mens-wrist-watches-led-clock-man-military-waterproof-navi-watch-relogio-masculino-2019";
+    }
+    
+    document.getElementById("imag12").src = a;
+    document.getElementById("popuptext").textContent = b;
+    document.getElementById("popuptitle").textContent = c;
+    document.getElementById("hreff").href = t;
+  }
+</script>
+
+<script>
+  function myFunction21() {
+    document.getElementById("popup").style.visibility = "visible";
+    let a, b, c, d, x, y, z, t, m;
+    x = document.getElementById("imag2").src;
+    y = document.getElementById("popuptext").textContent;
+    //alert(y);
+    z = document.getElementById("popuptitle").textContent;
+    t = document.getElementById("hreff").href
+    a = "";
+    b = "";
+    c = "";
+    d = "";
+    if (x == "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-354904609.jpg?v=1641376468") {     
+    a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-354904609.jpg?v=1641376468&width=200"; 
+    b ="2017 Luxury Brand Mens Watches Leather Men's Quartz Clock Man Casual Wrist Watch Relogio Masculino horloges mannen #515 — SALE PRICE ₴ 4.97 ";
+    c = "Men Stainless Steel Case Watch";
+    t = "https://ivankvachtest.myshopify.com/products/2017-luxury-brand-mens-watches-leather-mens-quartz-clock-man-casual-wrist-watch-relogio-masculino-horloges-mannen-515"
+      
+    }else if (x == "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1434056154.jpg?v=1641376520"){ 
+    a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1434056154.jpg?v=1641376520&width=200";
+    b ="CURREN Casual Sport Watches for Men Blue Top Brand Luxury Military Leather Wrist Watch Man Clock Fashion Chronograph Wristwatch — REGULAR PRICE ₴ 40.95";
+    c = "CURREN Casual Sport Watches for Men";
+    t = "https://ivankvachtest.myshopify.com/products/curren-casual-sport-watches-for-men-blue-top-brand-luxury-military-leather-wrist-watch-man-clock-fashion-chronograph-wristwatch"
+    }else if (x == "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1250884701.jpg?v=1641376553"){ 
+    a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1250884701.jpg?v=1641376553&width=200";
+    b ="Fashion Men Stainless Steel Case Watch Luxury Calendar Quartz Wrist Watches Business Casual Watch for Man Clock Relogio Masculin — REGULAR PRICE ₴ 28";
+    c = "Fashion Men Stainless Steel Luxury";
+    t = "https://ivankvachtest.myshopify.com/products/fashion-men-stainless-steel-case-watch-luxury-calendar-quartz-wrist-watches-business-casual-watch-for-man-clock-relogio-masculin"
+    }else if (x == "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-877140709.jpg?v=1641376632"){ 
+    a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-877140709.jpg?v=1641376632&width=200";
+    b ="SINOBI Digital Sports Watch Chronograph Men's Wrist Watches LED Clock Man Military Waterproof NAVI Watch Relogio Masculino 2019 — REGULAR PRICE ₴ 32.98";
+    c = "SINOBI Digital Sports Watch Men's";
+    t = "https://ivankvachtest.myshopify.com/products/sinobi-digital-sports-watch-chronograph-mens-wrist-watches-led-clock-man-military-waterproof-navi-watch-relogio-masculino-2019";
+    }
+    
+    document.getElementById("imag12").src = a;
+    document.getElementById("popuptext").textContent = b;
+    document.getElementById("popuptitle").textContent = c;
+    document.getElementById("hreff").href = t;
+  }
+</script>
+<script>
+  function myFunction22() {
+    document.getElementById("popup").style.visibility = "visible";
+    let a, b, c, d, x, y, z, t, m;
+    x = document.getElementById("imag3").src;
+    y = document.getElementById("popuptext").textContent;
+    //alert(y);
+    z = document.getElementById("popuptitle").textContent;
+    t = document.getElementById("hreff").href
+    a = "";
+    b = "";
+    c = "";
+    d = "";
+    if (x == "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-354904609.jpg?v=1641376468") {     
+    a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-354904609.jpg?v=1641376468&width=200"; 
+    b ="2017 Luxury Brand Mens Watches Leather Men's Quartz Clock Man Casual Wrist Watch Relogio Masculino horloges mannen #515 — SALE PRICE ₴ 4.97 ";
+    c = "Men Stainless Steel Case Watch";
+    t = "https://ivankvachtest.myshopify.com/products/2017-luxury-brand-mens-watches-leather-mens-quartz-clock-man-casual-wrist-watch-relogio-masculino-horloges-mannen-515"
+      
+    }else if (x == "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1434056154.jpg?v=1641376520"){ 
+    a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1434056154.jpg?v=1641376520&width=200";
+    b ="CURREN Casual Sport Watches for Men Blue Top Brand Luxury Military Leather Wrist Watch Man Clock Fashion Chronograph Wristwatch — REGULAR PRICE ₴ 40.95";
+    c = "CURREN Casual Sport Watches for Men";
+    t = "https://ivankvachtest.myshopify.com/products/curren-casual-sport-watches-for-men-blue-top-brand-luxury-military-leather-wrist-watch-man-clock-fashion-chronograph-wristwatch"
+    }else if (x == "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1250884701.jpg?v=1641376553"){ 
+    a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1250884701.jpg?v=1641376553&width=200";
+    b ="Fashion Men Stainless Steel Case Watch Luxury Calendar Quartz Wrist Watches Business Casual Watch for Man Clock Relogio Masculin — REGULAR PRICE ₴ 28";
+    c = "Fashion Men Stainless Steel Luxury";
+    t = "https://ivankvachtest.myshopify.com/products/fashion-men-stainless-steel-case-watch-luxury-calendar-quartz-wrist-watches-business-casual-watch-for-man-clock-relogio-masculin"
+    }else if (x == "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-877140709.jpg?v=1641376632"){ 
+    a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-877140709.jpg?v=1641376632&width=200";
+    b ="SINOBI Digital Sports Watch Chronograph Men's Wrist Watches LED Clock Man Military Waterproof NAVI Watch Relogio Masculino 2019 — REGULAR PRICE ₴ 32.98";
+    c = "SINOBI Digital Sports Watch Men's";
+    t = "https://ivankvachtest.myshopify.com/products/sinobi-digital-sports-watch-chronograph-mens-wrist-watches-led-clock-man-military-waterproof-navi-watch-relogio-masculino-2019"
+    }
+    
+    document.getElementById("imag12").src = a;
+    document.getElementById("popuptext").textContent = b;
+    document.getElementById("popuptitle").textContent = c;
+    document.getElementById("hreff").href = t;
+  }
+</script>
+<script>
+  function myFunction23() {
+    document.getElementById("popup").style.visibility = "visible";
+    let a, b, c, d, x, y, z, t, m;
+    x = document.getElementById("imag4").src;
+    y = document.getElementById("popuptext").textContent;
+    //alert(y);
+    z = document.getElementById("popuptitle").textContent;
+    t = document.getElementById("hreff").href
+    a = "";
+    b = "";
+    c = "";
+    d = "";
+    if (x == "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-354904609.jpg?v=1641376468") {     
+    a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-354904609.jpg?v=1641376468&width=200"; 
+    b ="2017 Luxury Brand Mens Watches Leather Men's Quartz Clock Man Casual Wrist Watch Relogio Masculino horloges mannen #515 — SALE PRICE ₴ 4.97 ";
+    c = "Men Stainless Steel Case Watch";
+    t = "https://ivankvachtest.myshopify.com/products/2017-luxury-brand-mens-watches-leather-mens-quartz-clock-man-casual-wrist-watch-relogio-masculino-horloges-mannen-515"
+      
+    }else if (x == "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1434056154.jpg?v=1641376520"){ 
+    a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1434056154.jpg?v=1641376520&width=200";
+    b ="CURREN Casual Sport Watches for Men Blue Top Brand Luxury Military Leather Wrist Watch Man Clock Fashion Chronograph Wristwatch — REGULAR PRICE ₴ 40.95";
+    c = "CURREN Casual Sport Watches for Men";
+    t = "https://ivankvachtest.myshopify.com/products/curren-casual-sport-watches-for-men-blue-top-brand-luxury-military-leather-wrist-watch-man-clock-fashion-chronograph-wristwatch"
+    }else if (x == "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1250884701.jpg?v=1641376553"){ 
+    a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1250884701.jpg?v=1641376553&width=200";
+    b ="Fashion Men Stainless Steel Case Watch Luxury Calendar Quartz Wrist Watches Business Casual Watch for Man Clock Relogio Masculin — REGULAR PRICE ₴ 28";
+    c = "Fashion Men Stainless Steel Luxury";
+    t = "https://ivankvachtest.myshopify.com/products/fashion-men-stainless-steel-case-watch-luxury-calendar-quartz-wrist-watches-business-casual-watch-for-man-clock-relogio-masculin"
+    }else if (x == "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-877140709.jpg?v=1641376632"){ 
+    a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-877140709.jpg?v=1641376632&width=200";
+    b ="SINOBI Digital Sports Watch Chronograph Men's Wrist Watches LED Clock Man Military Waterproof NAVI Watch Relogio Masculino 2019 — REGULAR PRICE ₴ 32.98";
+    c = "SINOBI Digital Sports Watch Men's";
+    t = "https://ivankvachtest.myshopify.com/products/sinobi-digital-sports-watch-chronograph-mens-wrist-watches-led-clock-man-military-waterproof-navi-watch-relogio-masculino-2019";
+    }
+    
+    document.getElementById("imag12").src = a;
+    document.getElementById("popuptext").textContent = b;
+    document.getElementById("popuptitle").textContent = c;
+    document.getElementById("hreff").href = t;
+  }
+</script> -->
+
+<script>
+  function myFunction3() {
+    document.getElementById("popup").style.visibility = "hidden";
+  }
+</script>
+
+<!-- Carousel -->
+
+
+
+<!--     <script>
+      function myFunction000() {
+        var x, y, z, a, sr;
+        x = document.getElementById("imag1").src;
+       // document.getElementById("testcarousel").innerHTML = "Paragraph changed!";
+        sr = "";
+        y = "";
+        z = "";
+        a = "";
+        if (x == "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-354904609.jpg?v=1641376468") {
+        sr = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1434056154.jpg?v=1641376520";        
+        y = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1250884701.jpg?v=1641376553";        
+        z = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-877140709.jpg?v=1641376632";        
+        a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-354904609.jpg?v=1641376468";
+        }else if(x == "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1434056154.jpg?v=1641376520") {
+        sr = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1250884701.jpg?v=1641376553";
+        y = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-877140709.jpg?v=1641376632";
+        z = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-354904609.jpg?v=1641376468";
+        a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1434056154.jpg?v=1641376520";
+        }else if(x == "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1250884701.jpg?v=1641376553") {
+        sr = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-877140709.jpg?v=1641376632";
+        y = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-354904609.jpg?v=1641376468";
+        z = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1434056154.jpg?v=1641376520";
+        a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1250884701.jpg?v=1641376553";
+        }else {
+        sr = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-354904609.jpg?v=1641376468";
+        y = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1434056154.jpg?v=1641376520";
+        z = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1250884701.jpg?v=1641376553";
+        a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-877140709.jpg?v=1641376632";
+        }
+        document.getElementById("imag1").src = sr;
+        document.getElementById("imag2").src = y;
+        document.getElementById("imag3").src = z;
+        document.getElementById("imag4").src = a;
+    }
+    function myFunction1() {
+        var x, y, z, a, sr;
+        x = document.getElementById("imag4").src;
+        sr = "";
+        y = "";
+        z = "";
+        a = "";
+        if (x == "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-877140709.jpg?v=1641376632") {
+        sr = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1250884701.jpg?v=1641376553";
+        y = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1434056154.jpg?v=1641376520";
+        z = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-354904609.jpg?v=1641376468";
+        a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-877140709.jpg?v=1641376632";
+        }else if(x == "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1250884701.jpg?v=1641376553") {
+        sr = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1434056154.jpg?v=1641376520";
+        y = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-354904609.jpg?v=1641376468";
+        z = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-877140709.jpg?v=1641376632";
+        a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1250884701.jpg?v=1641376553";
+        }else if(x == "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1434056154.jpg?v=1641376520") {
+        sr = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-354904609.jpg?v=1641376468";
+        y = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-877140709.jpg?v=1641376632";
+        z = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1250884701.jpg?v=1641376553";
+        a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1434056154.jpg?v=1641376520";
+        }else {
+        sr = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-877140709.jpg?v=1641376632";
+        y = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1250884701.jpg?v=1641376553";
+        z = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-1434056154.jpg?v=1641376520";
+        a = "https://cdn.shopify.com/s/files/1/0551/1820/0941/products/product-image-354904609.jpg?v=1641376468";
+        }
+        document.getElementById("imag4").src = sr;
+        document.getElementById("imag3").src = y;
+        document.getElementById("imag2").src = z;
+        document.getElementById("imag1").src = a;
+        //console.log(sr);
+    }
+         
+    </script> -->
+<script>   
+  function myFunction4 () {
+document.location.href = "https://ivankvachtest.myshopify.com/products/2017-luxury-brand-mens-watches-leather-mens-quartz-clock-man-casual-wrist-watch-relogio-masculino-horloges-mannen-515";
+  }
+</script>
+
+<div id="plo">{{ product.id }}</div>
+<div><h1>hello{{ page.content }}</h1></div>
+
+<!-- <script>
+  jQuery.getJSON( "/recommendations/products.json?product_id=6700434358381", function( data ) {
+    //6700434358381
+    console.log(data);
+    var items = [];
+    
+  jQuery.each( data, function( key, val ) {
+    items.push( "<li id='" + key + "'>" + val + "</li>" );
+    
+    document.getElementById("plo").innerHTML = items.join("");
+    console.log(items);
+  });
+ 
+  jQuery( "<ul/>", {
+    "class": "my-new-list",
+    html: items.join( "" )
+  }).appendTo( "body" );
+        
+});
+</script> -->
+    <script>
+      function myFunction() {
+        var x, y, z, t, a, b, c, d;
+        x = document.getElementById("imag1").src;
+        if (x == document.getElementById("imag1").src) {
+        x = document.getElementById("imag2").src
+        y = document.getElementById("imag3").src;
+        z = document.getElementById("imag4").src;
+        t = document.getElementById("imag1").src;
+          // в alt передається handle продукту
+           a = document.getElementById("imag2").alt;
+           b = document.getElementById("imag3").alt;
+           c = document.getElementById("imag4").alt;
+           d = document.getElementById("imag1").alt;
+        }
+        document.getElementById("imag1").src = x;
+        document.getElementById("imag2").src = y;
+        document.getElementById("imag3").src = z;
+        document.getElementById("imag4").src = t;
+        // в alt передається handle продукту
+        document.getElementById("imag1").alt = a;
+        document.getElementById("imag2").alt = b;
+        document.getElementById("imag3").alt = c;
+        document.getElementById("imag4").alt = d;
+    console.log(document.getElementById("imag1").alt);
+        console.log(document.getElementById("imag2").alt);
+      }
+       function myFunction1() {
+        var x, y, z, t;
+        x = document.getElementById("imag4").src;
+        if (x == document.getElementById("imag4").src) {
+        x = document.getElementById("imag3").src
+        y = document.getElementById("imag2").src;
+        z = document.getElementById("imag1").src;
+        t = document.getElementById("imag4").src;
+          // в alt передається handle продукту
+           a = document.getElementById("imag3").alt;
+           b = document.getElementById("imag2").alt;
+           c = document.getElementById("imag1").alt;
+           d = document.getElementById("imag4").alt;
+        }
+        document.getElementById("imag4").src = x;
+        document.getElementById("imag3").src = y;
+        document.getElementById("imag2").src = z;
+        document.getElementById("imag1").src = t;
+         // в alt передається handle продукту
+        document.getElementById("imag4").alt = a;
+        document.getElementById("imag3").alt = b;
+        document.getElementById("imag2").alt = c;
+        document.getElementById("imag1").alt = d;
+    console.log(document.getElementById("imag1").src);
+        console.log(document.getElementById("imag1").alt);
+      }
+        </script>
+
+        <!-- AJAX API -->
+<script>
+fetch("/recommendations/products.json?product_id=6700434358381&limit=4")
+  .then(response => response.json())
+  .then(({ products }) => {
+    if (products.length > 0) {
+      const firstRecommendedProduct = products[0];
+      const x = products[0].images[0];
+      const y = products[1].images[0];
+      const z = products[2].images[0];
+      const t = products[3].images[0];  
+      const a = products[0].handle;
+      const b = products[1].handle;
+      const c = products[2].handle;
+      const d = products[3].handle; 
+console.log(products);
+      console.log(document.getElementById("imag1").src);
+      document.getElementById("imag1").src = x;
+      document.getElementById("imag2").src = y;
+      document.getElementById("imag3").src = z;
+      document.getElementById("imag4").src = t;
+      // в alt передається handle продукту
+      document.getElementById("imag1").alt = a;
+      document.getElementById("imag2").alt = b;
+      document.getElementById("imag3").alt = c;
+      document.getElementById("imag4").alt = d;
+      console.log(
+        `The title of the first recommended product is: ${firstRecommendedProduct.id}`
+      );
+    }
+  }
+);
+</script>
+ <script>
+// jQuery.post('/cart/add.js', {
+//   "products": [
+//     {
+//       "id": 6700434358381,
+//       "title": "2017 Luxury Brand Mens Watches Leather Men's Quartz Clock Man Casual Wrist Watch Relogio Masculino horloges mannen #515",
+//     }
+//       ] 
+// });
+//    let formData = {
+//   "products": [
+//      {
+//        "id": 6700434358381,
+//        "title": "2017 Luxury Brand Mens Watches Leather Men's Quartz Clock Man Casual Wrist Watch Relogio Masculino horloges mannen #515",
+//      }
+//      ] 
+// };
+//    fetch('/cart/add.js', {
+//   method: 'POST',
+//   headers: {
+//     'Content-Type': 'application/json'
+//   },
+//   body: JSON.stringify(formData)
+// })
+// .then(response => {
+//   return response.json();
+// })
+// .catch((error) => {
+//   console.error('Error:', error);
+// });
+   var cartContents = fetch('/cart.js')
+  .then(response => response.json())
+  .then(data => { return data });
+   console.log(data);
+</script>
+<iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+<form method="post" action="/cart/add" target="dummyframe">
+        <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+        <input min="1" type="number" id="quantity" name="quantity" value="1"/>
+        <input type="submit" value="Add to cart" class="btn"/>
+</form>
+<script>
+// var jqxhr = $.getJSON( "recommendations/products.json", function() {
+//   alert( "Данные отправлены" );
+// })
+//   .done(function() {
+//     alert( "Данные отправлены (второй вариант сообщения)" );
+//   })
+//   .fail(function() {
+//     alert( "Ошибка" );
+//   })
+//   .always(function() {
+//     alert( "Отправка завершена" );
+//   });
+ 
+// // любой другой код ...
+ 
+// // Установим еще один обработчик успешного выполнения
+// jqxhr.complete(function() {
+//   console.log( "Отправка завершена (второй вариант сообщения)" );
+// });
+</script>
+<!-- <script>
+jQuery.getJSON('/recommendations/products.json?product_id=6700434358381', function(product) {
+  //alert('The title of this product is ' + product.title);
+} );
+</script> -->
+</div>
