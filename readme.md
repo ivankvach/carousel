@@ -1,1 +1,1 @@
-# Carousel
+# Carousel from shopify
